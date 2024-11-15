@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Roulette League Leaderboards</title>
+        <link rel="stylesheet" href="base.css">
+    </head>
+    <body>
+        <!-- best code you have ever seen-->
+        <h1>fanumSlots Coins Leaderboard</h1>
+        <hr>
+        <table>
+            <tr>
+                <th></th>
+                <th></th>
+                <th title="Users Fanum Coins">Fanum Coins</th>
+            </tr>
+            <tr>
+                <td>#1</td>
+                <td id="name0" class="player"> </td>
+                <td id="val0"> </td>
+            </tr>
+            <tr>
+                <td>#2</td>
+                <td id="name1" class="player"> </td>
+                <td id="val1"> </td>
+            </tr>
+            <tr>
+                <td>#3</td>
+                <td id="name2" class="player"> </td>
+                <td id="val2"> </td>
+            </tr>
+            <tr>
+                <td>#4</td>
+                <td id="name3" class="player"> </td>
+                <td id="val3"> </td>
+            </tr>
+            <tr>
+                <td>#5</td>
+                <td id="name4" class="player"> </td>
+                <td id="val4"> </td>
+            </tr>
+            <tr>
+                <td>#6</td>
+                <td id="name5" class="player"> </td>
+                <td id="val5"> </td>
+            </tr>
+            <tr>
+                <td>#7</td>
+                <td id="name6" class="player"> </td>
+                <td id="val6"> </td>
+            </tr>
+            <tr>
+                <td>#8</td>
+                <td id="name7" class="player"> </td>
+                <td id="val7"> </td>
+            </tr>
+            <tr>
+                <td>#9</td>
+                <td id="name8" class="player"> </td>
+                <td id="val8"> </td>
+            </tr>
+            <tr>
+                <td>#10</td>
+                <td id="name9" class="player"> </td>
+                <td id="val9"> </td>
+            </tr>
+            <tr>
+                <td>#11</td>
+                <td id="name10" class="player"> </td>
+                <td id="val10"> </td>
+            </tr>
+            <tr>
+                <td>#12</td>
+                <td id="name11" class="player"> </td>
+                <td id="val11"> </td>
+            </tr>
+            <tr>
+                <td>#13</td>
+                <td id="name12" class="player"> </td>
+                <td id="val12"> </td>
+            </tr>
+            <tr>
+                <td>#14</td>
+                <td id="name13" class="player"> </td>
+                <td id="val13"> </td>
+            </tr>
+            <tr>
+                <td>#15</td>
+                <td id="name14" class="player"> </td>
+                <td id="val14"> </td>
+            </tr>
+        </table>
+        <p>best code/design/layout ever.</p>
+    </body>
+    <script type="text/javascript">
+        window.onload = function() {
+            fetch('users.json')
+            .then(response => response.json())  
+            .then(data => {
+                var usrs = Object.keys(data);
+                for (let n = 0; n < 15; n++) {
+                    let usr = usrs.at(n);
+                    if (usr != null) {
+                        document.getElementById(`name${n}`).innerHTML = usr;
+                        document.getElementById(`val${n}`).innerHTML = data[usr];
+                    }
+;
+}
+            })
+            .catch(error => {
+                console.error('I messed up: ', error);
+            });
+        }
+       </script>
+</html>
