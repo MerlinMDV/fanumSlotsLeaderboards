@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
 
 html, body {
-    max-width: 100%;
-    overflow-x: auto;
+    overflow-x: scroll;
 }
 
 body {
